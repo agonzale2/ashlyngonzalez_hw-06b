@@ -1,32 +1,82 @@
+
 # -*- coding: utf-8 -*-
 """
-Updated Jan 21, 2018
-The primary goal of this file is to demonstrate a simple unittest implementation
-
-@author: jrr
-@author: rk
+M07.A07b - Testing a Legacy System
+Unit tests for the classifyTriangle() function.
 """
 
 import unittest
-
 from Triangle import classifyTriangle
 
-# This code implements the unit test functionality
-# https://docs.python.org/3/library/unittest.html has a nice description of the framework
 
 class TestTriangles(unittest.TestCase):
-    # define multiple sets of tests as functions with names that begin
 
-    def testRightTriangleA(self): 
-        self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
+    def check_triangles(self, cases):
+        """Test multiple inputs against their expected results."""
+        for sides, expected in cases:
+            with self.subTest(sides=sides):
+                self.assertEqual(classifyTriangle(*sides), expected)
 
-    def testRightTriangleB(self): 
-        self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
-        
-    def testEquilateralTriangles(self): 
-        self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
+    def testRightTriangles(self):
+        self.check_triangles([
+            ((3, 4, 5), 'Right'),
+            ((5, 3, 4), 'Right'),
+            ((4, 5, 3), 'Right'),
+            ((60, 80, 100), 'Right')
+        ])
+
+    def testEquilateralTriangles(self):
+        self.check_triangles([
+            ((1, 1, 1), 'Equilateral'),
+            ((50, 50, 50), 'Equilateral'),
+            ((200, 200, 200), 'Equilateral')
+        ])
+
+    def testIsoscelesTriangles(self):
+        self.check_triangles([
+            ((5, 5, 8), 'Isoceles'),
+            ((5, 8, 5), 'Isoceles'),
+            ((8, 5, 5), 'Isoceles')
+        ])
+
+    def testScaleneTriangles(self):
+        self.check_triangles([
+            ((4, 5, 6), 'Scalene'),
+            ((6, 4, 5), 'Scalene'),
+            ((5, 6, 4), 'Scalene')
+        ])
+
+    def testNotATriangle(self):
+        self.check_triangles([
+            ((1, 2, 3), 'NotATriangle'),
+            ((3, 1, 2), 'NotATriangle'),
+            ((2, 3, 1), 'NotATriangle'),
+            ((2, 3, 10), 'NotATriangle')
+        ])
+
+    def testInvalidInputs(self):
+        self.check_triangles([
+            ((0, 4, 5), 'InvalidInput'),
+            ((4, 0, 5), 'InvalidInput'),
+            ((4, 5, 0), 'InvalidInput'),
+            ((-1, 4, 5), 'InvalidInput'),
+            ((4, -1, 5), 'InvalidInput'),
+            ((4, 5, -1), 'InvalidInput'),
+            ((201, 100, 100), 'InvalidInput'),
+            ((100, 201, 100), 'InvalidInput'),
+            ((100, 100, 201), 'InvalidInput')
+        ])
+
+    def testNonIntegerInputs(self):
+        self.check_triangles([
+            ((3.5, 4, 5), 'InvalidInput'),
+            (("3", 4, 5), 'InvalidInput'),
+            ((None, 4, 5), 'InvalidInput')
+        ])
+
 
 if __name__ == '__main__':
-    print('Running unit tests')
     unittest.main()
+
+
 

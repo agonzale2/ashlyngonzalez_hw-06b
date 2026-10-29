@@ -1,0 +1,233 @@
+FFF.FFFEEFFFFFFFFFFF
+======================================================================
+ERROR: testNonIntegerInputs (TestTriangle.TestTriangles.testNonIntegerInputs) (sides=('3', 4, 5))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+                     ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/Triangle.py", line 31, in classifyTriangle
+    if a > 200 or b > 200 or c > 200:
+       ^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'int'
+
+======================================================================
+ERROR: testNonIntegerInputs (TestTriangle.TestTriangles.testNonIntegerInputs) (sides=(None, 4, 5))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+                     ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/Triangle.py", line 31, in classifyTriangle
+    if a > 200 or b > 200 or c > 200:
+       ^^^^^^^
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+
+======================================================================
+FAIL: testEquilateralTriangles (TestTriangle.TestTriangles.testEquilateralTriangles) (sides=(1, 1, 1))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Equilateral'
+- InvalidInput
++ Equilateral
+
+
+======================================================================
+FAIL: testEquilateralTriangles (TestTriangle.TestTriangles.testEquilateralTriangles) (sides=(50, 50, 50))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Equilateral'
+- InvalidInput
++ Equilateral
+
+
+======================================================================
+FAIL: testEquilateralTriangles (TestTriangle.TestTriangles.testEquilateralTriangles) (sides=(200, 200, 200))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Equilateral'
+- InvalidInput
++ Equilateral
+
+
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles.testIsoscelesTriangles) (sides=(5, 5, 8))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Isoceles'
+- InvalidInput
++ Isoceles
+
+
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles.testIsoscelesTriangles) (sides=(5, 8, 5))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Isoceles'
+- InvalidInput
++ Isoceles
+
+
+======================================================================
+FAIL: testIsoscelesTriangles (TestTriangle.TestTriangles.testIsoscelesTriangles) (sides=(8, 5, 5))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Isoceles'
+- InvalidInput
++ Isoceles
+
+
+======================================================================
+FAIL: testNotATriangle (TestTriangle.TestTriangles.testNotATriangle) (sides=(1, 2, 3))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'NotATriangle'
+- InvalidInput
++ NotATriangle
+
+
+======================================================================
+FAIL: testNotATriangle (TestTriangle.TestTriangles.testNotATriangle) (sides=(3, 1, 2))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'NotATriangle'
+- InvalidInput
++ NotATriangle
+
+
+======================================================================
+FAIL: testNotATriangle (TestTriangle.TestTriangles.testNotATriangle) (sides=(2, 3, 1))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'NotATriangle'
+- InvalidInput
++ NotATriangle
+
+
+======================================================================
+FAIL: testNotATriangle (TestTriangle.TestTriangles.testNotATriangle) (sides=(2, 3, 10))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'NotATriangle'
+- InvalidInput
++ NotATriangle
+
+
+======================================================================
+FAIL: testRightTriangles (TestTriangle.TestTriangles.testRightTriangles) (sides=(3, 4, 5))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Right'
+- InvalidInput
++ Right
+
+
+======================================================================
+FAIL: testRightTriangles (TestTriangle.TestTriangles.testRightTriangles) (sides=(5, 3, 4))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Right'
+- InvalidInput
++ Right
+
+
+======================================================================
+FAIL: testRightTriangles (TestTriangle.TestTriangles.testRightTriangles) (sides=(4, 5, 3))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Right'
+- InvalidInput
++ Right
+
+
+======================================================================
+FAIL: testRightTriangles (TestTriangle.TestTriangles.testRightTriangles) (sides=(60, 80, 100))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Right'
+- InvalidInput
++ Right
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles.testScaleneTriangles) (sides=(4, 5, 6))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Scalene'
+- InvalidInput
++ Scalene
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles.testScaleneTriangles) (sides=(6, 4, 5))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Scalene'
+- InvalidInput
++ Scalene
+
+
+======================================================================
+FAIL: testScaleneTriangles (TestTriangle.TestTriangles.testScaleneTriangles) (sides=(5, 6, 4))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ashlyn_gonzalez/Documents/GitHub/ashlyngonzalez_hw-06b/TestTriangle.py", line 18, in check_triangles
+    self.assertEqual(classifyTriangle(*sides), expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvalidInput' != 'Scalene'
+- InvalidInput
++ Scalene
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+FAILED (failures=17, errors=2)
